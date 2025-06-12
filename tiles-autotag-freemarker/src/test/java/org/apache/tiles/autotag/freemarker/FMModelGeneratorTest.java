@@ -25,6 +25,7 @@ import static org.junit.Assert.*;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
@@ -99,7 +100,7 @@ public class FMModelGeneratorTest {
         File effectiveFile = new File(tempDir, "/org/apache/tiles/autotag/freemarker/test/DoStuffFMModel.java");
         assertTrue(effectiveFile.exists());
         InputStream effective = new FileInputStream(effectiveFile);
-        assertTrue(IOUtils.contentEquals(effective, expected));
+        assertEquals(IOUtils.toString(expected, StandardCharsets.UTF_8),IOUtils.toString(effective, StandardCharsets.UTF_8));
         effective.close();
         expected.close();
 
@@ -134,7 +135,7 @@ public class FMModelGeneratorTest {
         effectiveFile = new File(tempDir, "/org/apache/tiles/autotag/freemarker/test/DoStuffNoBodyFMModel.java");
         assertTrue(effectiveFile.exists());
         effective = new FileInputStream(effectiveFile);
-        assertTrue(IOUtils.contentEquals(effective, expected));
+        assertEquals(IOUtils.toString(expected, StandardCharsets.UTF_8),IOUtils.toString(effective, StandardCharsets.UTF_8));
         effective.close();
         expected.close();
 

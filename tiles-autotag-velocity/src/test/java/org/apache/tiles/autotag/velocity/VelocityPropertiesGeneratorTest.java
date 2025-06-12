@@ -25,6 +25,7 @@ import static org.junit.Assert.*;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
@@ -62,6 +63,7 @@ public class VelocityPropertiesGeneratorTest {
         InputStream propsStream = getClass().getResourceAsStream("/org/apache/tiles/autotag/velocity.properties");
         props.load(propsStream);
         propsStream.close();
+        props.setProperty("space.gobbling","lines");
         VelocityEngine velocityEngine = new VelocityEngine(props);
 
         VelocityPropertiesGenerator generator = new VelocityPropertiesGenerator(velocityEngine);
@@ -120,7 +122,7 @@ public class VelocityPropertiesGeneratorTest {
         File effectiveFile = new File(tempDir, "META-INF/velocity.properties");
         assertTrue(effectiveFile.exists());
         InputStream effective = new FileInputStream(effectiveFile);
-        assertTrue(IOUtils.contentEquals(effective, expected));
+        assertEquals(IOUtils.toString(expected, StandardCharsets.UTF_8),IOUtils.toString(effective, StandardCharsets.UTF_8));
         effective.close();
         expected.close();
 

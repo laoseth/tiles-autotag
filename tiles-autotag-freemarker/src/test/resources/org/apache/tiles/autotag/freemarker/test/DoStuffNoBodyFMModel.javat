@@ -49,6 +49,7 @@ public class DoStuffNoBodyFMModel implements TemplateDirectiveModel {
             runtime.getParameter("two", java.lang.Float.class, 0.0f),
             runtime.getParameter("three", java.util.Date.class, null),
                 request
+
         );
     }
 }

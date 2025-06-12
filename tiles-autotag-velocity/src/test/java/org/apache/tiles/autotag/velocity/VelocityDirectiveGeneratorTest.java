@@ -25,6 +25,7 @@ import static org.junit.Assert.*;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -101,7 +102,7 @@ public class VelocityDirectiveGeneratorTest {
         File effectiveFile = new File(tempDir, "/org/apache/tiles/autotag/velocity/test/DoStuffDirective.java");
         assertTrue(effectiveFile.exists());
         InputStream effective = new FileInputStream(effectiveFile);
-        assertTrue(IOUtils.contentEquals(effective, expected));
+        assertEquals(IOUtils.toString(expected, StandardCharsets.UTF_8),IOUtils.toString(effective, StandardCharsets.UTF_8));
         effective.close();
         expected.close();
 
@@ -136,7 +137,7 @@ public class VelocityDirectiveGeneratorTest {
         effectiveFile = new File(tempDir, "/org/apache/tiles/autotag/velocity/test/DoStuffNoBodyDirective.java");
         assertTrue(effectiveFile.exists());
         effective = new FileInputStream(effectiveFile);
-        assertTrue(IOUtils.contentEquals(effective, expected));
+        assertEquals(IOUtils.toString(expected, StandardCharsets.UTF_8),IOUtils.toString(effective, StandardCharsets.UTF_8));
         effective.close();
         expected.close();
 

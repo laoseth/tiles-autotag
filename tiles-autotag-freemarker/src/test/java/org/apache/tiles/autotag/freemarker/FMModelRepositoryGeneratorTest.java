@@ -64,7 +64,7 @@ public class FMModelRepositoryGeneratorTest {
         VelocityEngine velocityEngine = new VelocityEngine(props);
 
         FMModelRepositoryGenerator generator = new FMModelRepositoryGenerator(velocityEngine);
-        File tempDir = new File(System.getProperty("java.io.tmpdir"), "autotag");
+        File tempDir = new File(System.getProperty("java.io.tmpdir"), "autotag2");
         OutputLocator locator = new DirectoryOutputLocator(tempDir);
         tempDir.deleteOnExit();
         TemplateSuite suite = new TemplateSuite("tldtest", "Test for TLD docs.");

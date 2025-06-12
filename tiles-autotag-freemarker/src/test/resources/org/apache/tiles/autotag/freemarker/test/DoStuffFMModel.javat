@@ -51,6 +51,7 @@ public class DoStuffFMModel implements TemplateDirectiveModel {
             runtime.getParameter("two", java.lang.Integer.class, 0),
             runtime.getParameter("three", java.lang.Boolean.class, false),
                 request, modelBody
+
         );
     }
 }

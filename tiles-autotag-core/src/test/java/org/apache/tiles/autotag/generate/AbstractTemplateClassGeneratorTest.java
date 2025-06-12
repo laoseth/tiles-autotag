@@ -202,7 +202,7 @@ public class AbstractTemplateClassGeneratorTest {
         expect(generator.getFilename(packageName, suite, clazz, parameters, runtimeClass, requestClass)).andReturn("myfile.txt");
         String sampleVmPath = "/sample.vm";
         expect(generator.getTemplatePath(packageName, suite, clazz, parameters, runtimeClass, requestClass)).andReturn(sampleVmPath);
-        expect(velocityEngine.getTemplate("/sample.vm")).andThrow(new Exception());
+        expect(velocityEngine.getTemplate("/sample.vm")).andThrow(new AutotagRuntimeException());
 
         replay(velocityEngine, generator, suite, clazz, template, parameters);
         generator.generate(locator, packageName, suite, clazz, parameters, runtimeClass, requestClass);
@@ -235,7 +235,7 @@ public class AbstractTemplateClassGeneratorTest {
         expect(generator.getTemplatePath(packageName, suite, clazz, parameters, runtimeClass, requestClass)).andReturn(sampleVmPath);
         expect(velocityEngine.getTemplate("/sample.vm")).andReturn(template);
         template.merge(isA(VelocityContext.class), isA(Writer.class));
-        expectLastCall().andThrow(new IOException());
+        expectLastCall().andThrow(new AutotagRuntimeException());
 
         replay(velocityEngine, generator, suite, clazz, template, parameters);
         generator.generate(locator, packageName, suite, clazz, parameters, runtimeClass, requestClass);

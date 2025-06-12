@@ -102,7 +102,7 @@ public class TagClassGeneratorTest {
         File effectiveFile = new File(tempDir, "/org/apache/tiles/autotag/jsp/test/DoStuffTag.java");
         assertTrue(effectiveFile.exists());
         InputStream effective = new FileInputStream(effectiveFile);
-        assertEquals(IOUtils.toString(effective, StandardCharsets.UTF_8),IOUtils.toString(expected, StandardCharsets.UTF_8));
+         assertEquals(IOUtils.toString(expected, StandardCharsets.UTF_8),IOUtils.toString(effective, StandardCharsets.UTF_8));
         effective.close();
         expected.close();
 
@@ -135,7 +135,7 @@ public class TagClassGeneratorTest {
         effectiveFile = new File(tempDir, "/org/apache/tiles/autotag/jsp/test/DoStuffNoBodyTag.java");
         assertTrue(effectiveFile.exists());
         effective = new FileInputStream(effectiveFile);
-        assertTrue(IOUtils.contentEquals(effective, expected));
+        assertEquals(IOUtils.toString(expected, StandardCharsets.UTF_8),IOUtils.toString(effective, StandardCharsets.UTF_8));
         effective.close();
         expected.close();
 
