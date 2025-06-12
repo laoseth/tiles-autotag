@@ -34,14 +34,14 @@ import org.apache.velocity.app.VelocityEngine;
 import org.junit.Test;
 
 /**
- * Tests {@link JspTemplateGeneratorFactory}.
+ * Tests JspTemplateGeneratorFactory.
  *
  * @version $Rev$ $Date$
  */
 public class VelocityTemplateGeneratorFactoryTest {
 
     /**
-     * Test method for {@link JspTemplateGeneratorFactory#createTemplateGenerator()}.
+     * Test method for JspTemplateGeneratorFactory#createTemplateGenerator().
      */
     @Test
     public void testCreateTemplateGenerator() {

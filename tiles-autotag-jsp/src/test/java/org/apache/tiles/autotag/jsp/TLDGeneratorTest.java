@@ -53,7 +53,7 @@ public class TLDGeneratorTest {
     public static final String REQUEST_CLASS = "org.apache.tiles.autotag.jsp.test.Request";
 
     /**
-     * Test method for {@link TLDGenerator#generate(File, String, TemplateSuite, Map)}.
+     * Test method for {@link TLDGenerator#generate(OutputLocator, String, TemplateSuite, Map)}
      * @throws Exception If something goes wrong.
      */
     @Test

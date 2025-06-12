@@ -51,9 +51,6 @@ public class QDoxTemplateSuiteFactoryTest {
      */
     private QDoxTemplateSuiteFactory factory;
 
-    /**
-     * @throws java.lang.Exception
-     */
     @Before
     public void setUp() {
         factory = new QDoxTemplateSuiteFactory(
@@ -68,7 +65,7 @@ public class QDoxTemplateSuiteFactoryTest {
     }
 
     /**
-     * Test method for {@link org.apache.tiles.autotag.core.DefaultTemplateSuiteFactory#createTemplateSuite()}.
+     * Test method for org.apache.tiles.autotag.core.DefaultTemplateSuiteFactory#createTemplateSuite().
      */
     @Test
     public void testCreateTemplateSuite() {

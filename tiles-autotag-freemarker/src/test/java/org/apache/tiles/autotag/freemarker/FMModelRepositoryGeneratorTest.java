@@ -27,6 +27,7 @@ import java.io.FileInputStream;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Properties;
 
 import org.apache.commons.io.FileUtils;
@@ -42,7 +43,7 @@ import org.apache.velocity.app.VelocityEngine;
 import org.junit.Test;
 
 /**
- * Tests {@link TLDGenerator}.
+ * Tests TLDGenerator.
  *
  * @version $Rev$ $Date$
  */
@@ -51,7 +52,7 @@ public class FMModelRepositoryGeneratorTest {
     public static final String REQUEST_CLASS = "org.apache.tiles.autotag.freemarker.test.Request";
 
     /**
-     * Test method for {@link FMModelRepositoryGenerator#generate(File, String, TemplateSuite, java.util.Map)}.
+     * Test method for {@link FMModelRepositoryGenerator#generate(OutputLocator, String, TemplateSuite, Map)}
      * @throws Exception If something goes wrong.
      */
     @Test

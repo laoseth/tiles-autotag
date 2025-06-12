@@ -93,8 +93,7 @@ public class AbstractTemplateClassGeneratorTest {
     }
 
     /**
-     * Test method for {@link AbstractTemplateClassGenerator#generate(java.io.File,
-     * String, TemplateSuite, TemplateClass, Map)}.
+     * Test method for {@link AbstractTemplateClassGenerator#generate(OutputLocator, String, TemplateSuite, TemplateClass, Map, String, String)} 
      * @throws Exception If something goes wrong.
      */
     @Test
@@ -124,7 +123,7 @@ public class AbstractTemplateClassGeneratorTest {
     }
 
     /**
-     * Test method for {@link AbstractTemplateClassGenerator#generate(File, String, TemplateSuite, TemplateClass, Map)}.
+     * Test method for {@link AbstractTemplateClassGenerator#generate(OutputLocator, String, TemplateSuite, TemplateClass, Map, String, String)} 
      * @throws Exception If something goes wrong.
      */
     @Test(expected = AutotagRuntimeException.class)
@@ -153,7 +152,7 @@ public class AbstractTemplateClassGeneratorTest {
     }
 
     /**
-     * Test method for {@link AbstractTemplateClassGenerator#generate(File, String, TemplateSuite, TemplateClass, Map)}.
+     * Test method for {@link AbstractTemplateClassGenerator#generate(OutputLocator, String, TemplateSuite, TemplateClass, Map, String, String)} 
      * @throws Exception If something goes wrong.
      */
     @Test(expected = AutotagRuntimeException.class)
@@ -182,7 +181,7 @@ public class AbstractTemplateClassGeneratorTest {
     }
 
     /**
-     * Test method for {@link AbstractTemplateClassGenerator#generate(File, String, TemplateSuite, TemplateClass, Map)}.
+     * Test method for {@link AbstractTemplateClassGenerator#generate(OutputLocator, String, TemplateSuite, TemplateClass, Map, String, String)} 
      * @throws Exception If something goes wrong.
      */
     @Test(expected = AutotagRuntimeException.class)
@@ -211,7 +210,7 @@ public class AbstractTemplateClassGeneratorTest {
     }
 
     /**
-     * Test method for {@link AbstractTemplateClassGenerator#generate(File, String, TemplateSuite, TemplateClass, Map)}.
+     * Test method for {@link AbstractTemplateClassGenerator#generate(OutputLocator, String, TemplateSuite, TemplateClass, Map, String, String)} 
      * @throws Exception If something goes wrong.
      * @throws ParseErrorException If something goes wrong.
      * @throws ResourceNotFoundException If something goes wrong.
@@ -244,7 +243,7 @@ public class AbstractTemplateClassGeneratorTest {
     }
 
     /**
-     * Test method for {@link AbstractTemplateClassGenerator#generate(File, String, TemplateSuite, TemplateClass, Map)}.
+     * Test method for {@link AbstractTemplateClassGenerator#generate(OutputLocator, String, TemplateSuite, TemplateClass, Map, String, String)} 
      * @throws Exception If something goes wrong.
      * @throws ParseErrorException If something goes wrong.
      * @throws ResourceNotFoundException If something goes wrong.

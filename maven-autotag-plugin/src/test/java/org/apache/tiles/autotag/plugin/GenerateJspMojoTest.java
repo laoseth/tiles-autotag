@@ -23,6 +23,7 @@ package org.apache.tiles.autotag.plugin;
 import static org.junit.Assert.*;
 
 import org.apache.tiles.autotag.jsp.JspTemplateGeneratorFactory;
+import org.apache.velocity.app.VelocityEngine;
 import org.junit.Test;
 
 /**
@@ -33,7 +34,7 @@ import org.junit.Test;
 public class GenerateJspMojoTest {
 
     /**
-     * Test method for {@link GenerateJspMojo#createTemplateGeneratorFactory(VelocityEngine)}.
+     * Test method for {@link GenerateJspMojo#createTemplateGeneratorFactory(VelocityEngine)} 
      */
     @Test
     public void testCreateTemplateGeneratorFactory() {

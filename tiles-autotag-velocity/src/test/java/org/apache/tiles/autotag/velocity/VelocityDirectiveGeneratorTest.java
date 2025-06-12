@@ -27,6 +27,7 @@ import java.io.FileInputStream;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Properties;
 
 import org.apache.commons.io.FileUtils;
@@ -52,7 +53,7 @@ public class VelocityDirectiveGeneratorTest {
 
     /**
      * Test method for
-     * {@link VelocityDirectiveGenerator#generate(File, String, TemplateSuite, TemplateClass, java.util.Map)}.
+     * {@link VelocityDirectiveGenerator#generate(OutputLocator, String, TemplateSuite, TemplateClass, Map, String, String)} 
      * @throws Exception If something goes wrong.
      */
     @Test

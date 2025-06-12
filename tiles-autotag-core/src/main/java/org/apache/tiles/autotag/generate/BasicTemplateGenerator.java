@@ -108,7 +108,7 @@ class BasicTemplateGenerator implements TemplateGenerator {
         /**
          * Constructor.
          *
-         * @param directory The directory where files are generated.
+         * @param outputLocator The directory where files are generated.
          * @param generator The generator.
          */
         public TSGeneratorDirectoryPair(OutputLocator outputLocator,
@@ -155,7 +155,7 @@ class BasicTemplateGenerator implements TemplateGenerator {
         /**
          * Constructor.
          *
-         * @param directory The directory where files are generated.
+         * @param outputLocator The directory where files are generated.
          * @param generator The generator.
          */
         public TCGeneratorDirectoryPair(OutputLocator outputLocator,

@@ -25,6 +25,7 @@ import static org.junit.Assert.*;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -53,7 +54,7 @@ public class TagClassGeneratorTest {
     public static final String REQUEST_CLASS = "org.apache.tiles.autotag.jsp.test.Request";
 
     /**
-     * Test method for {@link TagClassGenerator#generate(File, String, TemplateSuite, TemplateClass, Map)}.
+     * Test method for {@link TagClassGenerator#generate(OutputLocator, String, TemplateSuite, TemplateClass, Map, String, String)}.
      * @throws Exception If something goes wrong.
      */
     @Test
@@ -101,7 +102,7 @@ public class TagClassGeneratorTest {
         File effectiveFile = new File(tempDir, "/org/apache/tiles/autotag/jsp/test/DoStuffTag.java");
         assertTrue(effectiveFile.exists());
         InputStream effective = new FileInputStream(effectiveFile);
-        assertTrue(IOUtils.contentEquals(effective, expected));
+        assertEquals(IOUtils.toString(effective, StandardCharsets.UTF_8),IOUtils.toString(expected, StandardCharsets.UTF_8));
         effective.close();
         expected.close();
 

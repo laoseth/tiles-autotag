@@ -42,7 +42,7 @@ import org.apache.velocity.app.VelocityEngine;
 import org.junit.Test;
 
 /**
- * Tests {@link TagClassGenerator}.
+ * Tests TagClassGenerator.
  *
  * @version $Rev$ $Date$
  */
@@ -51,7 +51,7 @@ public class FMModelGeneratorTest {
     public static final String REQUEST_CLASS = "org.apache.tiles.autotag.freemarker.test.Request";
 
     /**
-     * Test method for {@link TagClassGenerator#generate(File, String, TemplateSuite, TemplateClass, java.util.Map)}.
+     * Test method for TagClassGenerator#generate(File, String, TemplateSuite, TemplateClass, java.util.Map).
      * @throws Exception If something goes wrong.
      */
     @Test

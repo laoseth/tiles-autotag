@@ -158,7 +158,7 @@ public class TemplateParameter {
     }
 
     /**
-     * Indicates that this parameter implements {@link Request}.
+     * Indicates that this parameter implements Request.
      *
      * @return <code>true</code> if the parameter is a request.
      */

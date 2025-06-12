@@ -47,7 +47,7 @@ import org.junit.Test;
 public class BasicTemplateGeneratorTest {
 
     /**
-     * Test method for {@link BasicTemplateGenerator#generate(String, TemplateSuite, Map)}.
+     * Test method for {@link BasicTemplateGenerator#generate(String, TemplateSuite, Map, String, String)}.
      * @throws IOException If something goes wrong.
      */
     @Test

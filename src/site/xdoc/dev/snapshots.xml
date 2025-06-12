@@ -50,7 +50,7 @@
 
         <source><![CDATA[
           <dependency>
-              <groupId>org.apache.tiles</groupId>
+              <groupId>org.apache.tiles.jakarta</groupId>
               <artifactId>tiles-autotag-core-runtime</artifactId>
               <version>1.0-SNAPSHOT</version>
           </dependency>
@@ -61,7 +61,7 @@
         
         <source><![CDATA[
           <plugin>
-              <groupId>org.apache.tiles</groupId>
+              <groupId>org.apache.tiles.jakarta</groupId>
               <artifactId>maven-autotag-plugin</artifactId>
               <version>1.0-SNAPSHOT</version>
               <configuration>

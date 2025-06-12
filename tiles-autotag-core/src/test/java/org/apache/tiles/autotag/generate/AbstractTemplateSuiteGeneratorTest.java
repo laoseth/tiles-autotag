@@ -92,7 +92,7 @@ public class AbstractTemplateSuiteGeneratorTest {
     }
 
     /**
-     * Test method for {@link AbstractTemplateSuiteGenerator#generate(File, String, TemplateSuite, Map)}.
+     * Test method for {@link AbstractTemplateSuiteGenerator#generate(OutputLocator, String, TemplateSuite, Map)}.
      * @throws Exception If something goes wrong.
      * @throws ParseErrorException If something goes wrong.
      * @throws ResourceNotFoundException If something goes wrong.
@@ -121,7 +121,7 @@ public class AbstractTemplateSuiteGeneratorTest {
     }
 
     /**
-     * Test method for {@link AbstractTemplateSuiteGenerator#generate(File, String, TemplateSuite, Map)}.
+     * Test method for {@link AbstractTemplateSuiteGenerator#generate(OutputLocator, String, TemplateSuite, Map)}.
      * @throws Exception If something goes wrong.
      * @throws ParseErrorException If something goes wrong.
      * @throws ResourceNotFoundException If something goes wrong.
@@ -149,7 +149,7 @@ public class AbstractTemplateSuiteGeneratorTest {
     }
 
     /**
-     * Test method for {@link AbstractTemplateSuiteGenerator#generate(File, String, TemplateSuite, Map)}.
+     * Test method for {@link AbstractTemplateSuiteGenerator#generate(OutputLocator, String, TemplateSuite, Map)}.
      * @throws Exception If something goes wrong.
      * @throws ParseErrorException If something goes wrong.
      * @throws ResourceNotFoundException If something goes wrong.
@@ -177,7 +177,7 @@ public class AbstractTemplateSuiteGeneratorTest {
     }
 
     /**
-     * Test method for {@link AbstractTemplateSuiteGenerator#generate(File, String, TemplateSuite, Map)}.
+     * Test method for {@link AbstractTemplateSuiteGenerator#generate(OutputLocator, String, TemplateSuite, Map)}.
      * @throws Exception If something goes wrong.
      * @throws ParseErrorException If something goes wrong.
      * @throws ResourceNotFoundException If something goes wrong.
@@ -205,7 +205,7 @@ public class AbstractTemplateSuiteGeneratorTest {
     }
 
     /**
-     * Test method for {@link AbstractTemplateSuiteGenerator#generate(File, String, TemplateSuite, Map)}.
+     * Test method for {@link AbstractTemplateSuiteGenerator#generate(OutputLocator, String, TemplateSuite, Map)}.
      * @throws Exception If something goes wrong.
      * @throws ParseErrorException If something goes wrong.
      * @throws ResourceNotFoundException If something goes wrong.
@@ -235,7 +235,7 @@ public class AbstractTemplateSuiteGeneratorTest {
     }
 
     /**
-     * Test method for {@link AbstractTemplateSuiteGenerator#generate(File, String, TemplateSuite, Map)}.
+     * Test method for {@link AbstractTemplateSuiteGenerator#generate(OutputLocator, String, TemplateSuite, Map)}.
      * @throws Exception If something goes wrong.
      * @throws ParseErrorException If something goes wrong.
      * @throws ResourceNotFoundException If something goes wrong.

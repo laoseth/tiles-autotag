@@ -33,8 +33,10 @@
                    href="../index.html"/>
         </menu>
 
+        <!-- TODO not sure how to fix this correctly
         ${modules}
         ${reports}
+        -->
 
     </body>
 </project>

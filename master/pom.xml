@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Licensed to the Apache Software Foundation (ASF) under one or more
+  contributor license agreements. See the NOTICE file distributed with
+  this work for additional information regarding copyright ownership.
+  The ASF licenses this file to You under the Apache License, Version
+  2.0 (the "License"); you may not use this file except in compliance
+  with the License. You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0 Unless required by
+  applicable law or agreed to in writing, software distributed under
+  the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES
+  OR CONDITIONS OF ANY KIND, either express or implied. See the
+  License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <prerequisites><maven>${maven.version.minimum}</maven></prerequisites>
+    <parent>
+        <groupId>org.apache</groupId>
+        <artifactId>apache</artifactId>
+        <version>18</version>
+        <relativePath/>
+    </parent>
+    <groupId>org.apache.tiles.jakarta</groupId>
+    <artifactId>tiles-master</artifactId>
+    <version>17.0</version>
+    <packaging>pom</packaging>
+    <name>Apache Tiles Jakarta (Master POM)</name>
+    <scm>
+        <connection>scm:git:https://github.com/laoseth/tiles-autotag.git</connection>
+        <url>https://github.com/laoseth/tiles-autotag</url>
+    </scm>
+
+    <description>
+        The Apache Tiles project.  This master pom provides the default values for
+        common maven configuration throughout the Tiles project.
+    </description>
+    <url>http://tiles.apache.org/</url>
+    <inceptionYear>2001</inceptionYear>
+
+    <properties>
+        <maven.version.minimum>3.8.1</maven.version.minimum>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+    </properties>
+
+    <developers>
+        <developer>
+            <name>Antonio Petrelli</name>
+            <id>apetrelli</id>
+            <email>apetrelli at apache.org</email>
+            <roles>
+                <role>PMC Member</role>
+            </roles>
+        </developer>
+        <developer>
+            <name>David H. DeWolf</name>
+            <id>ddewolf</id>
+            <email>ddewolf at apache.org</email>
+            <roles>
+                <role>PMC Member</role>
+            </roles>
+        </developer>
+        <developer>
+            <name>Greg Reddin</name>
+            <id>greddin</id>
+            <email>greddin at apache.org</email>
+            <roles>
+                <role>PMC Member</role>
+            </roles>
+        </developer>
+        <developer>
+            <name>Joe Germuska</name>
+            <id>germuska</id>
+            <email>germuska at apache.org</email>
+            <roles>
+                <role>PMC Member</role>
+            </roles>
+        </developer>
+        <developer>
+            <name>Martin Cooper</name>
+            <id>martinc</id>
+            <email>martinc at apache.org</email>
+            <roles>
+                <role>PMC Member</role>
+            </roles>
+        </developer>
+        <developer>
+            <name>Nathan Bubna</name>
+            <id>nbubna</id>
+            <email>nbubna at apache.org</email>
+            <roles>
+                <role>PMC Member</role>
+            </roles>
+        </developer>
+        <developer>
+            <name>Wendy Smoak</name>
+            <id>wsmoak</id>
+            <email>wsmoak at apache.org</email>
+            <roles>
+                <role>PMC Member</role>
+            </roles>
+        </developer>
+        <developer>
+            <name>Craig McClanahan</name>
+            <id>craigmcc</id>
+            <email>craigmcc at apache.org</email>
+            <roles>
+                <role>PMC Member</role>
+            </roles>
+        </developer>
+        <developer>
+            <name>Mick Semb Wever</name>
+            <id>mck</id>
+            <email>mck at apache.org</email>
+            <url>http://people.apache.org/~mck</url>
+            <roles>
+                <role>PMC Chair</role>
+            </roles>
+        </developer>
+        <developer>
+            <name>Nicolas Le Bas</name>
+            <id>nlebas</id>
+            <email>nlebas at apache.org</email>
+            <roles>
+                <role>PMC Member</role>
+            </roles>
+        </developer>
+        <developer>
+            <name>Seth Wilcox</name>
+            <id>laoseth</id>
+            <email>nlebas at apache.org</email>
+            <roles>
+                <role>Some Guy</role>
+            </roles>
+        </developer>
+    </developers>
+
+    <contributors>
+        <contributor>
+            <name>Cserveny Tamás</name>
+        </contributor>
+        <contributor>
+            <name>Dirk Alexander Schaefer</name>
+        </contributor>
+        <contributor>
+            <name>Jacky Chan</name>
+        </contributor>
+        <contributor>
+            <name>Joe Pemberton</name>
+        </contributor>
+        <contributor>
+            <name>Matthieu Chase Heimer</name>
+        </contributor>
+        <contributor>
+            <name>Mike Calmus</name>
+        </contributor>
+        <contributor>
+            <name>Neil Aggarwal</name>
+        </contributor>
+        <contributor>
+            <name>Niall Pemberton</name>
+        </contributor>
+        <contributor>
+            <name>pijmleko</name>
+        </contributor>
+        <contributor>
+            <name>Scot Meyer</name>
+        </contributor>
+        <contributor>
+            <name>Thom Hehl</name>
+        </contributor>
+        <contributor>
+            <name>Zarick Lau</name>
+        </contributor>
+        <contributor>
+            <name>Morten Lied Johansen</name>
+        </contributor>
+    </contributors>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.13.0</version>
+                    <configuration>
+                        <source>17</source>
+                        <target>17</target>
+                        <showDeprecation>true</showDeprecation>
+                        <showWarnings>true</showWarnings>
+                        <compilerArgs>
+                            <arg>-Xlint:all</arg>
+                            <arg>-Xlint:-processing</arg>
+                        </compilerArgs>
+                    </configuration>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.jacoco</groupId>
+                    <artifactId>jacoco-maven-plugin</artifactId>
+                    <version>0.8.12</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-enforcer-plugin</artifactId>
+                <version>3.4.1</version>
+                <executions>
+                    <execution>
+                        <id>enforce-java</id>
+                        <goals><goal>enforce</goal></goals>
+                        <configuration>
+                            <rules>
+                                <requireJavaVersion>
+                                    <version>[17,)</version>
+                                </requireJavaVersion>
+                            </rules>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>3.21.0</version>
+            </plugin>
+            <plugin>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>3.1.1</version>
+                <inherited>true</inherited>
+                <configuration>
+                    <useReleaseProfile>false</useReleaseProfile>
+                    <goals>deploy</goals>
+                    <arguments>-Papache-release </arguments>
+                    <autoVersionSubmodules>true</autoVersionSubmodules>
+                </configuration>
+            </plugin>
+        </plugins>
+        <extensions>
+            <extension>
+                <groupId>org.apache.maven.wagon</groupId>
+                <artifactId>wagon-ssh</artifactId>
+                <version>3.5.3</version>
+            </extension>
+        </extensions>
+    </build>
+
+    <reporting>
+        <plugins>
+            <plugin>
+                <artifactId>maven-surefire-report-plugin</artifactId>
+                <version>3.5.1</version>
+            </plugin>
+            <plugin>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+                <version>3.6.0</version>
+                <configuration>
+<!--                    <configLocation>http://svn.apache.org/repos/asf/tiles/maven/trunk/build/tiles_checks_v5.xml-->
+<!--                    </configLocation>-->
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-jxr-plugin</artifactId>
+                <version>3.5.0</version>
+                <reportSets>
+                    <reportSet>
+                        <reports>
+                            <report>aggregate</report>
+                        </reports>
+                    </reportSet>
+                </reportSets>
+            </plugin>
+            <plugin>
+                <artifactId>maven-pmd-plugin</artifactId>
+                <version>3.26.0</version>
+                <configuration>
+                    <targetJdk>17</targetJdk>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.6.3</version>
+                <configuration>
+                    <detectLinks>true</detectLinks>
+                    <failOnError>false</failOnError>
+                    <dependencyLinks>
+                        <dependencyLink>
+                            <groupId>org.junit.jupiter</groupId>
+                            <artifactId>junit-jupiter-api</artifactId>
+                            <url>https://javadoc.io/doc/org.junit.jupiter/junit-jupiter-api/${junitVersion}</url>
+                        </dependencyLink>
+                        <dependencyLink>
+                            <groupId>org.easymock</groupId>
+                            <artifactId>easymock</artifactId>
+                            <url>https://javadoc.io/doc/org.easymock/easymock/${easymockVersion}</url>
+                        </dependencyLink>
+                        <dependencyLink>
+                            <groupId>jakarta.servlet</groupId>
+                            <artifactId>jakarta.servlet-api</artifactId>
+                            <url>https://javadoc.io/doc/jakarta.servlet/jakarta.servlet-api/${jakartaServletVersion}</url>
+                        </dependencyLink>
+                        <dependencyLink>
+                            <groupId>org.apache.tiles.jakarta</groupId>
+                            <artifactId>tiles-request-api</artifactId>
+                            <url>https://javadoc.io/doc/org.apache.tiles/tiles-request-api/${tilesRequestApiVersion}</url>
+                        </dependencyLink>
+                    </dependencyLinks>
+                    <linksource>true</linksource>
+                    <failOnError>true</failOnError>
+                    <quiet>false</quiet>
+                    <verbose>false</verbose>
+                    <doclint>all</doclint>
+                    <notimestamp>true</notimestamp>
+                    <source>17</source>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>rat-maven-plugin</artifactId>
+                <version>1.0-alpha-3</version>
+                <configuration>
+                    <includes>
+                        <include>pom.xml</include>
+                        <include>src/**</include>
+                    </includes>
+                    <excludes>
+                        <exclude>**/*LICENSE.txt</exclude>
+                        <exclude>**/*MANIFEST.MF</exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <reportSets>
+                    <reportSet>
+                        <reports>
+                            <report>report</report>
+                        </reports>
+                    </reportSet>
+                </reportSets>
+            </plugin>
+        </plugins>
+    </reporting>
+</project>

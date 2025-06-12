@@ -23,12 +23,11 @@ under the License.
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <artifactId>tiles-autotag</artifactId>
-    <groupId>org.apache.tiles</groupId>
-    <version>1.3-SNAPSHOT</version>
+    <groupId>org.apache.tiles.jakarta</groupId>
+    <version>${revision}</version>
   </parent>
-  <groupId>org.apache.tiles</groupId>
   <artifactId>tiles-autotag-jsp</artifactId>
-  <version>1.3-SNAPSHOT</version>
+  <version>${revision}</version>
   <name>Tiles Autotag - JSP tags automatic generation</name>
   <description>Generates JSP tags automatically from templates.</description>
   <properties>
@@ -47,7 +46,7 @@ under the License.
         <scope>test</scope>
     </dependency>
     <dependency>
-    	<groupId>org.apache.tiles</groupId>
+    	<groupId>org.apache.tiles.jakarta</groupId>
     	<artifactId>tiles-autotag-core</artifactId>
     </dependency>
     <dependency>
