@@ -61,7 +61,7 @@ public class AbstractGenerateMojoTest {
         @SuppressWarnings("unchecked")
         Map<String, String> params = createMock(Map.class);
         AbstractGenerateMojo mojo = createMockBuilder(AbstractGenerateMojo.class).createMock();
-        List<String> classpathElements = new ArrayList<String>();
+        List<String> classpathElements = new ArrayList<>();
         File source = new File(System.getProperty("basedir"), "src/test/resources");
         classpathElements.add(source.getAbsolutePath());
         mojo.classpathElements = classpathElements;

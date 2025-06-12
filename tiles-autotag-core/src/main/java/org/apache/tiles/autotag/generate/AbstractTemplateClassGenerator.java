@@ -48,7 +48,7 @@ public abstract class AbstractTemplateClassGenerator implements
     /**
      * The Velocity engine to use.
      */
-    private VelocityEngine velocityEngine;
+    private final VelocityEngine velocityEngine;
 
     /**
      * Constructor.
@@ -79,12 +79,9 @@ public abstract class AbstractTemplateClassGenerator implements
 	        try {
 	            Template template = velocityEngine.getTemplate(getTemplatePath(
 	                    packageName, suite, clazz, parameters, runtimeClass, requestClass));
-	            Writer writer = new OutputStreamWriter(outputLocator.getOutputStream(filePath));
-	            try {
-	                template.merge(context, writer);
-	            } finally {
-	                writer.close();
-	            }
+                try (Writer writer = new OutputStreamWriter(outputLocator.getOutputStream(filePath))) {
+                    template.merge(context, writer);
+                }
 	        } catch (ResourceNotFoundException e) {
 	            throw new AutotagRuntimeException("Cannot find template resource",
 	                    e);

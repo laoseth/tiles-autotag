@@ -37,12 +37,12 @@ public class TemplateGeneratorBuilder {
     /**
      * The template suite generators.
      */
-    private List<TSGeneratorDirectoryPair> templateSuiteGenerators;
+    private final List<TSGeneratorDirectoryPair> templateSuiteGenerators;
 
     /**
      * The template class generators.
      */
-    private List<TCGeneratorDirectoryPair> templateClassGenerators;
+    private final List<TCGeneratorDirectoryPair> templateClassGenerators;
 
     /**
      * Indicates that this generator generates resources.
@@ -68,8 +68,8 @@ public class TemplateGeneratorBuilder {
      * Constructor.
      */
     private TemplateGeneratorBuilder() {
-        templateSuiteGenerators = new ArrayList<BasicTemplateGenerator.TSGeneratorDirectoryPair>();
-        templateClassGenerators = new ArrayList<BasicTemplateGenerator.TCGeneratorDirectoryPair>();
+        templateSuiteGenerators = new ArrayList<>();
+        templateClassGenerators = new ArrayList<>();
     }
 
     /**

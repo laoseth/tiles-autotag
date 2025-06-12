@@ -59,7 +59,7 @@ public class BasicTemplateGeneratorTest {
         TemplateClassGenerator templateClassGenerator = createMock(TemplateClassGenerator.class);
         @SuppressWarnings("unchecked")
         Map<String, String> parameters = createMock(Map.class);
-        List<TemplateClass> templateClasses = new ArrayList<TemplateClass>();
+        List<TemplateClass> templateClasses = new ArrayList<>();
 
         templateClasses.add(templateClass);
 
@@ -70,9 +70,9 @@ public class BasicTemplateGeneratorTest {
         replay(suite, templateClass, templateSuiteGenerator, templateClassGenerator, parameters);
         TSGeneratorDirectoryPair tsPair = new TSGeneratorDirectoryPair(locator, templateSuiteGenerator);
         TCGeneratorDirectoryPair tcPair = new TCGeneratorDirectoryPair(locator, templateClassGenerator);
-        List<TSGeneratorDirectoryPair> tsList = new ArrayList<BasicTemplateGenerator.TSGeneratorDirectoryPair>();
+        List<TSGeneratorDirectoryPair> tsList = new ArrayList<>();
         tsList.add(tsPair);
-        List<TCGeneratorDirectoryPair> tcList = new ArrayList<BasicTemplateGenerator.TCGeneratorDirectoryPair>();
+        List<TCGeneratorDirectoryPair> tcList = new ArrayList<>();
         tcList.add(tcPair);
         BasicTemplateGenerator generator = new BasicTemplateGenerator(tsList, tcList, true, false);
         assertTrue(generator.isGeneratingClasses());

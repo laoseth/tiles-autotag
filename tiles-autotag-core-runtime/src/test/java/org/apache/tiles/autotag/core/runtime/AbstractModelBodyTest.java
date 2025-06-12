@@ -132,7 +132,7 @@ public class AbstractModelBodyTest {
         /**
          * The result to return.
          */
-        private String toReturn;
+        private final String toReturn;
 
         /**
          * Constructor.

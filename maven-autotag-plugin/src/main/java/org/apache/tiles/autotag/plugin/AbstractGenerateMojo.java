@@ -103,13 +103,10 @@ public abstract class AbstractGenerateMojo extends AbstractMojo {
         	TemplateSuite suite;
         	URLConnection templateSuite = findTemplateSuiteDescriptor();
         	long lastModified = templateSuite.getLastModified();
-        	InputStream stream = templateSuite.getInputStream();
-            try {
-	            XStream xstream = new XStream(new SunUnsafeReflectionProvider());
-				xstream.allowTypesByWildcard(new String[]{"org.apache.tiles.**"});
-	            suite = (TemplateSuite) xstream.fromXML(stream);
-            } finally {
-	            stream.close();
+            try (InputStream stream = templateSuite.getInputStream()) {
+                XStream xstream = new XStream(new SunUnsafeReflectionProvider());
+                xstream.allowTypesByWildcard(new String[]{"org.apache.tiles.**"});
+                suite = (TemplateSuite) xstream.fromXML(stream);
             }
             classesOutputLocator = new MavenOutputLocator(classesOutputDirectory, lastModified);
             resourcesOutputLocator = new MavenOutputLocator(resourcesOutputDirectory, lastModified);
@@ -128,8 +125,6 @@ public abstract class AbstractGenerateMojo extends AbstractMojo {
             	buildContext.refresh(classesOutputDirectory);
                 addCompileSourceRoot(classesOutputDirectory.getAbsolutePath());
             }
-        } catch (IOException e) {
-            throw new MojoExecutionException("error", e);
         } catch (RuntimeException e) {
             throw e;
         } catch (Exception e) {
@@ -158,9 +153,10 @@ public abstract class AbstractGenerateMojo extends AbstractMojo {
 		@SuppressWarnings("unchecked")
 		List<String> roots = project.getCompileSourceRoots();
 		for(String root: roots) {
-			if(directory.equals(root)) {
-				addResource = false;
-			}
+            if (directory.equals(root)) {
+                addResource = false;
+                break;
+            }
 		}
 		if(addResource) {
 		    project.addCompileSourceRoot(directory);
@@ -209,8 +205,8 @@ public abstract class AbstractGenerateMojo extends AbstractMojo {
 
     private final class MavenOutputLocator implements OutputLocator {
     	
-    	private File outputDirectory;
-    	private long sourceLastModified;
+    	private final File outputDirectory;
+    	private final long sourceLastModified;
     	
     	private MavenOutputLocator(File outputDirectory, long sourceLastModified) {
     		this.outputDirectory = outputDirectory;

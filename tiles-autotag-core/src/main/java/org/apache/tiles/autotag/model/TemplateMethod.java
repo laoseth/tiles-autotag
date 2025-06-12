@@ -34,7 +34,7 @@ public class TemplateMethod {
     /**
      * The name of the method.
      */
-    private String name;
+    private final String name;
 
     /**
      * Documentation about the method.
@@ -44,7 +44,7 @@ public class TemplateMethod {
     /**
      * The map of parameters.
      */
-    private Map<String, TemplateParameter> parameters;
+    private final Map<String, TemplateParameter> parameters;
 
     /**
      * Constructor.
@@ -55,7 +55,7 @@ public class TemplateMethod {
     public TemplateMethod(String name,
             Iterable<? extends TemplateParameter> parameters) {
         this.name = name;
-        this.parameters = new LinkedHashMap<String, TemplateParameter>();
+        this.parameters = new LinkedHashMap<>();
         for (TemplateParameter parameter : parameters) {
             this.parameters.put(parameter.getName(), parameter);
         }

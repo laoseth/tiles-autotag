@@ -177,20 +177,20 @@ public class CreateDescriptorMojo extends AbstractMojo {
     private Scanner getSourceInclusionScanner() {
     	Scanner scanner = buildContext.newScanner( sourceDirectory );
         if (includes == null) {
-            includes = new HashSet<String>();
+            includes = new HashSet<>();
         }
         if (excludes == null) {
-            excludes = new HashSet<String>();
+            excludes = new HashSet<>();
         }
 
         if (includes.isEmpty()) {
             scanner.setIncludes(new String[] {"**/*Model.java"});
         }
         else {
-        	scanner.setIncludes(includes.toArray(new String[includes.size()]));
+        	scanner.setIncludes(includes.toArray(new String[0]));
         }
         if (!excludes.isEmpty()) {
-        	scanner.setExcludes(excludes.toArray(new String[excludes.size()]));
+        	scanner.setExcludes(excludes.toArray(new String[0]));
         }
         scanner.scan();
         return scanner;

@@ -30,8 +30,8 @@ import java.io.OutputStream;
  */
 public class DirectoryOutputLocator implements OutputLocator {
 
-	private File directory;
-	private long sourceLastModified;
+	private final File directory;
+	private final long sourceLastModified;
 
 	public DirectoryOutputLocator(File directory) {
 		this.directory = directory;

@@ -57,7 +57,7 @@ public class QDoxTemplateSuiteFactory implements TemplateSuiteFactory {
     /**
      * The Javadoc builder.
      */
-    private JavaDocBuilder builder;
+    private final JavaDocBuilder builder;
 
     /**
      * The name of the suite.
@@ -137,7 +137,7 @@ public class QDoxTemplateSuiteFactory implements TemplateSuiteFactory {
 
     @Override
     public TemplateSuite createTemplateSuite() {
-        List<TemplateClass> classes = new ArrayList<TemplateClass>();
+        List<TemplateClass> classes = new ArrayList<>();
         for (JavaClass clazz : builder.getClasses()) {
             String tagClassPrefix = getTagClassPrefix(clazz);
             if (tagClassPrefix != null) {
@@ -188,7 +188,7 @@ public class QDoxTemplateSuiteFactory implements TemplateSuiteFactory {
      * @return The template method descriptor.
      */
     private TemplateMethod createMethod(JavaMethod method) {
-        List<TemplateParameter> params = new ArrayList<TemplateParameter>();
+        List<TemplateParameter> params = new ArrayList<>();
         for (JavaParameter parameter : method.getParameters()) {
             String exportedName = parameter.getName();
             boolean required = false;
@@ -261,12 +261,10 @@ public class QDoxTemplateSuiteFactory implements TemplateSuiteFactory {
             if (params.length >= 2) {
                 JavaParameter param1 = params[params.length - 2];
                 JavaParameter param2 = params[params.length - 1];
-                if (requestClass.equals(
+                return requestClass.equals(
                         param1.getType().getFullyQualifiedName())
                         && ModelBody.class.getName().equals(
-                                param2.getType().getFullyQualifiedName())) {
-                    return true;
-                }
+                        param2.getType().getFullyQualifiedName());
             }
         }
         return false;

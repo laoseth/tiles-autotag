@@ -70,10 +70,10 @@ public class TagClassGeneratorTest {
         OutputLocator locator = new DirectoryOutputLocator(tempDir);
         tempDir.deleteOnExit();
         TemplateSuite suite = new TemplateSuite("tldtest", "Test for TLD docs.");
-        Map<String, String> parameters = new HashMap<String, String>();
+        Map<String, String> parameters = new HashMap<>();
         parameters.put("taglibURI", "http://www.initrode.net/tags/test");
 
-        List<TemplateParameter> params = new ArrayList<TemplateParameter>();
+        List<TemplateParameter> params = new ArrayList<>();
         TemplateParameter param = new TemplateParameter("one", "one", "java.lang.String", null, true, false);
         param.setDocumentation("Parameter one.");
         params.add(param);
@@ -107,7 +107,7 @@ public class TagClassGeneratorTest {
         expected.close();
 
         suite.addTemplateClass(clazz);
-        params = new ArrayList<TemplateParameter>();
+        params = new ArrayList<>();
         param = new TemplateParameter("one", "one", "java.lang.Double", null, true, false);
         param.setDocumentation("Parameter one.");
         params.add(param);

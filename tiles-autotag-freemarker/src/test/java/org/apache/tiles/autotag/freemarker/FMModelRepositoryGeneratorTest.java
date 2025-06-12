@@ -69,7 +69,7 @@ public class FMModelRepositoryGeneratorTest {
         tempDir.deleteOnExit();
         TemplateSuite suite = new TemplateSuite("tldtest", "Test for TLD docs.");
 
-        List<TemplateParameter> params = new ArrayList<TemplateParameter>();
+        List<TemplateParameter> params = new ArrayList<>();
         TemplateParameter param = new TemplateParameter("one", "one", "java.lang.String", null, true, false);
         param.setDocumentation("Parameter one.");
         params.add(param);
@@ -92,7 +92,7 @@ public class FMModelRepositoryGeneratorTest {
         clazz.setDocumentation("Documentation of the DoStuff class");
 
         suite.addTemplateClass(clazz);
-        params = new ArrayList<TemplateParameter>();
+        params = new ArrayList<>();
         param = new TemplateParameter("one", "one", "java.lang.Double", null, true, false);
         param.setDocumentation("Parameter one.");
         params.add(param);

@@ -58,7 +58,7 @@ public class TemplateSuiteTest {
         expect(class2.getName()).andReturn("class2");
 
         replay(class1, class2);
-        List<TemplateClass> classes = new ArrayList<TemplateClass>();
+        List<TemplateClass> classes = new ArrayList<>();
         classes.add(class1);
         classes.add(class2);
         TemplateSuite suite = new TemplateSuite("name", "docs", classes);
@@ -84,7 +84,7 @@ public class TemplateSuiteTest {
         expect(class2.getName()).andReturn("class2");
 
         replay(class1, class2);
-        List<TemplateClass> classes = new ArrayList<TemplateClass>();
+        List<TemplateClass> classes = new ArrayList<>();
         classes.add(class1);
         classes.add(class2);
         TemplateSuite suite = new TemplateSuite("name", "docs");

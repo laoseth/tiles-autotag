@@ -34,17 +34,17 @@ public class TemplateClass {
     /**
      * The class name.
      */
-    private String name;
+    private final String name;
 
     /**
      * The name of the tag.
      */
-    private String tagName;
+    private final String tagName;
 
     /**
      * The prefix of the tag class.
      */
-    private String tagClassPrefix;
+    private final String tagClassPrefix;
 
     /**
      * Documentation about this tag.
@@ -54,7 +54,7 @@ public class TemplateClass {
     /**
      * The method that executes the template class.
      */
-    private TemplateMethod executeMethod;
+    private final TemplateMethod executeMethod;
 
     /**
      * Constructor.
@@ -155,7 +155,7 @@ public class TemplateClass {
      * @return The regular parameters.
      */
     public Collection<TemplateParameter> getParameters() {
-        Map<String, TemplateParameter> params = new LinkedHashMap<String, TemplateParameter>();
+        Map<String, TemplateParameter> params = new LinkedHashMap<>();
         fillRegularParameters(params, executeMethod);
         return params.values();
     }

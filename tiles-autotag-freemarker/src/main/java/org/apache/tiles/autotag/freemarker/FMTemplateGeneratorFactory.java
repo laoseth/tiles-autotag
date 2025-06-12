@@ -36,17 +36,17 @@ public class FMTemplateGeneratorFactory implements TemplateGeneratorFactory {
     /**
      * Location of the file.
      */
-    private OutputLocator classesOutputLocator;
+    private final OutputLocator classesOutputLocator;
 
     /**
      * The Velocity engine.
      */
-    private VelocityEngine velocityEngine;
+    private final VelocityEngine velocityEngine;
 
     /**
      * The template generator builder.
      */
-    private TemplateGeneratorBuilder templateGeneratorBuilder;
+    private final TemplateGeneratorBuilder templateGeneratorBuilder;
 
     /**
      * Constructor.

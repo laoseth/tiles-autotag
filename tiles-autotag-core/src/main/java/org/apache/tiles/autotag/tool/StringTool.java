@@ -41,18 +41,18 @@ public class StringTool {
     /**
      * Maps a primitive type to its default value as a string.
      */
-    private Map<String, String> type2default;
+    private final Map<String, String> type2default;
 
     /**
      * Maps a primitive type to its boxed version.
      */
-    private Map<String, String> primitive2wrapped;
+    private final Map<String, String> primitive2wrapped;
 
     /**
      * Constructor.
      */
     public StringTool() {
-        type2default = new HashMap<String, String>();
+        type2default = new HashMap<>();
         type2default.put("byte", "0");
         type2default.put("short", "0");
         type2default.put("int", "0");
@@ -62,7 +62,7 @@ public class StringTool {
         type2default.put("char", "'\\u0000'");
         type2default.put("boolean", "false");
 
-        primitive2wrapped = new HashMap<String, String>();
+        primitive2wrapped = new HashMap<>();
         primitive2wrapped.put("byte", Byte.class.getName());
         primitive2wrapped.put("short", Short.class.getName());
         primitive2wrapped.put("int", Integer.class.getName());
@@ -80,7 +80,7 @@ public class StringTool {
      * @return The list of splitted strings.
      */
     public List<String> splitOnNewlines(String toSplit) {
-        List<String> retValue = new ArrayList<String>();
+        List<String> retValue = new ArrayList<>();
         if (toSplit == null) {
             return retValue;
         }

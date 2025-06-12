@@ -36,22 +36,22 @@ public class JspTemplateGeneratorFactory implements TemplateGeneratorFactory {
     /**
      * Location of the file.
      */
-    private OutputLocator classesOutputLocator;
+    private final OutputLocator classesOutputLocator;
 
     /**
      * Location of the file.
      */
-    private OutputLocator resourcesOutputLocator;
+    private final OutputLocator resourcesOutputLocator;
 
     /**
      * The Velocity engine.
      */
-    private VelocityEngine velocityEngine;
+    private final VelocityEngine velocityEngine;
 
     /**
      * The template generator builder.
      */
-    private TemplateGeneratorBuilder templateGeneratorBuilder;
+    private final TemplateGeneratorBuilder templateGeneratorBuilder;
 
     /**
      * Constructor.

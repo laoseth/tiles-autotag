@@ -59,7 +59,6 @@ import org.junit.Test;
 import org.sonatype.plexus.build.incremental.BuildContext;
 
 import com.thoughtworks.xstream.XStream;
-import com.thoughtworks.xstream.converters.reflection.Sun14ReflectionProvider;
 import com.thoughtworks.xstream.converters.reflection.SunUnsafeReflectionProvider;
 
 /**
@@ -124,7 +123,7 @@ public class CreateDescriptorMojoTest {
         assertTrue(templateClass.hasBody());
         assertEquals("execute", templateMethod.getName());
         assertEquals("It starts.", templateMethod.getDocumentation());
-        List<TemplateParameter> parameters = new ArrayList<TemplateParameter>(templateMethod.getParameters());
+        List<TemplateParameter> parameters = new ArrayList<>(templateMethod.getParameters());
         assertEquals(4, parameters.size());
         TemplateParameter parameter = parameters.get(0);
         assertEquals("one", parameter.getName());
@@ -149,7 +148,7 @@ public class CreateDescriptorMojoTest {
         templateMethod = templateClass.getExecuteMethod();
         assertNotNull(templateMethod);
         assertEquals("execute", templateMethod.getName());
-        parameters = new ArrayList<TemplateParameter>(templateMethod.getParameters());
+        parameters = new ArrayList<>(templateMethod.getParameters());
         assertEquals(4, parameters.size());
         parameter = parameters.get(0);
         assertEquals("one", parameter.getName());
@@ -167,7 +166,7 @@ public class CreateDescriptorMojoTest {
         assertNotNull(templateMethod);
         assertEquals("execute", templateMethod.getName());
         assertEquals("It executes.", templateMethod.getDocumentation());
-        parameters = new ArrayList<TemplateParameter>(templateMethod.getParameters());
+        parameters = new ArrayList<>(templateMethod.getParameters());
         assertEquals(3, parameters.size());
         parameter = parameters.get(0);
         assertEquals("one", parameter.getName());
@@ -189,13 +188,7 @@ public class CreateDescriptorMojoTest {
 
 	private String[] getModels(File sourceDirectory) {
 		File modelDir = new File(sourceDirectory, "org/apache/tiles/autotag/plugin/internal/");
-        String[] models = modelDir.list(new FilenameFilter() {
-			
-			@Override
-			public boolean accept(File dir, String name) {
-				return name.endsWith("Model.java");
-			}
-		});
+        String[] models = modelDir.list((dir, name) -> name.endsWith("Model.java"));
         for(int i = 0; i<models.length; i++) {
         	models[i] = "org/apache/tiles/autotag/plugin/internal/" + models[i];
         }

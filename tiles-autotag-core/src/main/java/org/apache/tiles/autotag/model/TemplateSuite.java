@@ -34,17 +34,17 @@ public class TemplateSuite {
     /**
      * The name of the suite.
      */
-    private String name;
+    private final String name;
 
     /**
      * The documentation of this suite.
      */
-    private String documentation;
+    private final String documentation;
 
     /**
      * The map of template classes.
      */
-    private Map<String, TemplateClass> templateClasses;
+    private final Map<String, TemplateClass> templateClasses;
 
     /**
      * Constructor.
@@ -67,7 +67,7 @@ public class TemplateSuite {
             Iterable<? extends TemplateClass> classes) {
         this.name = name;
         this.documentation = documentation;
-        templateClasses = new LinkedHashMap<String, TemplateClass>();
+        templateClasses = new LinkedHashMap<>();
         if (classes != null) {
             for (TemplateClass templateClass : classes) {
                 templateClasses.put(templateClass.getName(), templateClass);

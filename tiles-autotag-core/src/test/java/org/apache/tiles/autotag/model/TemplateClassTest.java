@@ -98,7 +98,7 @@ public class TemplateClassTest {
         TemplateParameter param3 = createMock(TemplateParameter.class);
         TemplateParameter param4 = createMock(TemplateParameter.class);
         TemplateMethod method = createMock(TemplateMethod.class);
-        List<TemplateParameter> params = new ArrayList<TemplateParameter>();
+        List<TemplateParameter> params = new ArrayList<>();
 
         expect(method.getParameters()).andReturn(params);
         expect(param1.isRequest()).andReturn(true);
@@ -145,7 +145,7 @@ public class TemplateClassTest {
      */
     @Test
     public void testToString() {
-        TemplateMethod method = new TemplateMethod("method", new ArrayList<TemplateParameter>());
+        TemplateMethod method = new TemplateMethod("method", new ArrayList<>());
         TemplateClass templateClass = new TemplateClass("name", "tagName", "tagClassPrefix", method);
         assertEquals(
                 "TemplateClass [name=name, tagName=tagName, tagClassPrefix=tagClassPrefix, "

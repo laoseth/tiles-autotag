@@ -38,12 +38,12 @@ class BasicTemplateGenerator implements TemplateGenerator {
     /**
      * The template suite generators.
      */
-    private List<TSGeneratorDirectoryPair> templateSuiteGenerators;
+    private final List<TSGeneratorDirectoryPair> templateSuiteGenerators;
 
     /**
      * The template class generators.
      */
-    private List<TCGeneratorDirectoryPair> templateClassGenerators;
+    private final List<TCGeneratorDirectoryPair> templateClassGenerators;
 
     /**
      * Indicates that this generator generates resources.
@@ -98,12 +98,12 @@ class BasicTemplateGenerator implements TemplateGenerator {
         /**
          * The directory where files are generated.
          */
-        private OutputLocator outputLocator;
+        private final OutputLocator outputLocator;
 
         /**
          * The generator.
          */
-        private TemplateSuiteGenerator generator;
+        private final TemplateSuiteGenerator generator;
 
         /**
          * Constructor.
@@ -145,12 +145,12 @@ class BasicTemplateGenerator implements TemplateGenerator {
         /**
          * The directory where files are generated.
          */
-        private OutputLocator outputLocator;
+        private final OutputLocator outputLocator;
 
         /**
          * The generator.
          */
-        private TemplateClassGenerator generator;
+        private final TemplateClassGenerator generator;
 
         /**
          * Constructor.

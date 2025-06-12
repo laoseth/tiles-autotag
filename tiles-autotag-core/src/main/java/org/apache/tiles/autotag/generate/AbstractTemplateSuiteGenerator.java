@@ -46,7 +46,7 @@ public abstract class AbstractTemplateSuiteGenerator implements TemplateSuiteGen
     /**
      * The velocity engine.
      */
-    private VelocityEngine velocityEngine;
+    private final VelocityEngine velocityEngine;
 
     /**
      * Constructor.
@@ -72,12 +72,9 @@ public abstract class AbstractTemplateSuiteGenerator implements TemplateSuiteGen
 	        try {
 	            Template template = velocityEngine.getTemplate(getTemplatePath(
 	                    packageName, suite, parameters));
-	            Writer writer = new OutputStreamWriter(outputLocator.getOutputStream(filePath));
-	            try {
-	                template.merge(context, writer);
-	            } finally {
-	                writer.close();
-	            }
+                try (Writer writer = new OutputStreamWriter(outputLocator.getOutputStream(filePath))) {
+                    template.merge(context, writer);
+                }
 	        } catch (ResourceNotFoundException e) {
 	            throw new AutotagRuntimeException("Cannot find template resource", e);
 	        } catch (ParseErrorException e) {

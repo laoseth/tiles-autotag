@@ -84,7 +84,7 @@ public class QDoxTemplateSuiteFactoryTest {
         assertTrue(templateClass.hasBody());
         assertEquals("execute", templateMethod.getName());
         assertEquals("It starts.", templateMethod.getDocumentation());
-        List<TemplateParameter> parameters = new ArrayList<TemplateParameter>(templateMethod.getParameters());
+        List<TemplateParameter> parameters = new ArrayList<>(templateMethod.getParameters());
         assertEquals(4, parameters.size());
         TemplateParameter parameter = parameters.get(0);
         assertEquals("one", parameter.getName());
@@ -109,7 +109,7 @@ public class QDoxTemplateSuiteFactoryTest {
         templateMethod = templateClass.getExecuteMethod();
         assertNotNull(templateMethod);
         assertEquals("execute", templateMethod.getName());
-        parameters = new ArrayList<TemplateParameter>(templateMethod.getParameters());
+        parameters = new ArrayList<>(templateMethod.getParameters());
         assertEquals(4, parameters.size());
         parameter = parameters.get(0);
         assertEquals("one", parameter.getName());
@@ -127,7 +127,7 @@ public class QDoxTemplateSuiteFactoryTest {
         assertNotNull(templateMethod);
         assertEquals("execute", templateMethod.getName());
         assertEquals("It executes.", templateMethod.getDocumentation());
-        parameters = new ArrayList<TemplateParameter>(templateMethod.getParameters());
+        parameters = new ArrayList<>(templateMethod.getParameters());
         assertEquals(3, parameters.size());
         parameter = parameters.get(0);
         assertEquals("one", parameter.getName());

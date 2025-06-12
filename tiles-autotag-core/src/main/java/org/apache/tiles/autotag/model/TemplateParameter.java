@@ -32,13 +32,13 @@ public class TemplateParameter {
     /**
      * The name of the parameter.
      */
-    private String name;
+    private final String name;
 
     /**
      * The exported name, i.e. the name of the parameter in created code. Usually
      * helpful if this exported name is a reserved word.
      */
-    private String exportedName;
+    private final String exportedName;
 
     /**
      * The parameter documentation.
@@ -48,22 +48,22 @@ public class TemplateParameter {
     /**
      * The type of the parameter.
      */
-    private String type;
+    private final String type;
 
     /**
      * The default value, as it will be written in Java code.
      */
-    private String defaultValue;
+    private final String defaultValue;
 
     /**
      * Indicates that this parameter is required.
      */
-    private boolean required;
+    private final boolean required;
 
     /**
      * Indicates that this parameter is the request.
      */
-    private boolean request;
+    private final boolean request;
 
     /**
      * Constructor.

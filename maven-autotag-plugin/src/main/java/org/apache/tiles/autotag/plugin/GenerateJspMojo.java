@@ -73,7 +73,7 @@ public class GenerateJspMojo extends AbstractGenerateMojo {
     /** {@inheritDoc} */
     @Override
     protected Map<String, String> getParameters() {
-        Map<String, String> params = new HashMap<String, String>();
+        Map<String, String> params = new HashMap<>();
         params.put("taglibURI", taglibURI);
         return params;
     }

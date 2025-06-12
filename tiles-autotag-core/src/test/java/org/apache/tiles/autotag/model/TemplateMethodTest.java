@@ -48,7 +48,7 @@ public class TemplateMethodTest {
         expect(param2.getName()).andReturn("param2");
 
         replay(param1, param2);
-        List<TemplateParameter> parameters = new ArrayList<TemplateParameter>();
+        List<TemplateParameter> parameters = new ArrayList<>();
         parameters.add(param1);
         parameters.add(param2);
 
@@ -68,7 +68,7 @@ public class TemplateMethodTest {
      */
     @Test
     public void testSetDocumentation() {
-        TemplateMethod method = new TemplateMethod("method", new ArrayList<TemplateParameter>());
+        TemplateMethod method = new TemplateMethod("method", new ArrayList<>());
         method.setDocumentation("docs");
         assertEquals("docs", method.getDocumentation());
     }
@@ -86,7 +86,7 @@ public class TemplateMethodTest {
         expect(param1.isBody()).andReturn(true);
 
         replay(param1, param2);
-        List<TemplateParameter> parameters = new ArrayList<TemplateParameter>();
+        List<TemplateParameter> parameters = new ArrayList<>();
         parameters.add(param1);
         parameters.add(param2);
 
@@ -109,7 +109,7 @@ public class TemplateMethodTest {
         expect(param2.isBody()).andReturn(false);
 
         replay(param1, param2);
-        List<TemplateParameter> parameters = new ArrayList<TemplateParameter>();
+        List<TemplateParameter> parameters = new ArrayList<>();
         parameters.add(param1);
         parameters.add(param2);
 
@@ -123,7 +123,7 @@ public class TemplateMethodTest {
      */
     @Test
     public void testToString() {
-        TemplateMethod method = new TemplateMethod("method", new ArrayList<TemplateParameter>());
+        TemplateMethod method = new TemplateMethod("method", new ArrayList<>());
         assertEquals("TemplateMethod [name=method, documentation=null, parameters={}]", method.toString());
     }
 
